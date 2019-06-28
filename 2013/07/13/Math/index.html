@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="娱乐的个人博客">
 <meta property="og:description" content="数学常见问题  1、调和级数敛散性证明 调和级数：\(\sum^{\infty}_{i=1} \frac{1}{i}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{5}+...\) 1、利用不等式\(x&amp;gt;ln(1+x), x&amp;gt;0\)来证明。 \[ \sum^{\infty}_{i=1} \frac{1}{i}&amp;gt;\sum^{">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-26T13:35:35.767Z">
+<meta property="og:updated_time" content="2019-06-28T07:23:51.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Math">
 <meta name="twitter:description" content="数学常见问题  1、调和级数敛散性证明 调和级数：\(\sum^{\infty}_{i=1} \frac{1}{i}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{5}+...\) 1、利用不等式\(x&amp;gt;ln(1+x), x&amp;gt;0\)来证明。 \[ \sum^{\infty}_{i=1} \frac{1}{i}&amp;gt;\sum^{">
@@ -357,12 +357,12 @@
 <h3 id="调和级数敛散性证明">1、调和级数敛散性证明</h3>
 <p>调和级数：<span class="math inline">\(\sum^{\infty}_{i=1} \frac{1}{i}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{5}+...\)</span></p>
 <p>1、利用不等式<span class="math inline">\(x&gt;ln(1+x), x&gt;0\)</span>来证明。 <span class="math display">\[
-\sum^{\infty}_{i=1} \frac{1}{i}&gt;\sum^{\infty}_{i=1} ln(1+ \frac{1}{i})=\sum^{\infty}_{i=1}ln(i+1)-ln(i)=\lim_{n \to \infty}ln(n+1)
+\sum^{\infty}_{i=1} \frac{1}{i}&gt;\sum^{\infty}_{i=1} ln(1+ \frac{1}{i})=\sum^{\infty}_{i=1}ln(i+1)-ln(i)\\=\lim_{n \to \infty}ln(n+1)
 \]</span> 故调和级数不收敛。</p>
 <p>2、（反证法）假设部分和<span class="math inline">\(s_{n}=1+\frac{1}{2}+\frac{1}{3}+...+\frac{1}{n}\)</span>收敛即<span class="math inline">\(lim_{n \to \infty}s_{n}\)</span>存在，设<span class="math inline">\(lim_{n \to \infty}s_{n}=a\)</span>，则<span class="math inline">\(lim_{n \to \infty}s_{2n}=a\)</span></p>
 <p>又有<span class="math inline">\(s_{2n}=1+\frac{1}{2}+\frac{1}{3}+...+\frac{1}{2n}\)</span></p>
 <p>那么 <span class="math display">\[
-s_{2n}-\frac{1}{2}=1+(\frac{1}{3}+\frac{1}{4})+...+\frac{1}{2n-1}+\frac{1}{2n}&gt;
+s_{2n}-\frac{1}{2}=1+(\frac{1}{3}+\frac{1}{4})+...+\frac{1}{2n-1}+\frac{1}{2n}\\&gt;
 1+(\frac{1}{4}+\frac{1}{4})+...+(\frac{1}{2n}+\frac{1}{2n})
 \\=1+\frac{1}{2}+...+\frac{1}{n}=s_{n}
 \]</span> 则<span class="math inline">\(a-\frac{1}{2}=a\)</span>，故假设不成立，故<span class="math inline">\(s_{n}\)</span>不收敛</p>
@@ -376,7 +376,7 @@ s_{2n}-\frac{1}{2}=1+(\frac{1}{3}+\frac{1}{4})+...+\frac{1}{2n-1}+\frac{1}{2n}&g
 <p>设<span class="math inline">\(f(x)\)</span>是定义在(a，b)上的凸函数，其中<span class="math inline">\(-∞&lt;a&lt;b&lt;+∞\)</span>。则对任意<span class="math inline">\(a&lt;x&lt;b，a&lt;y&lt;b和0≤λ≤1\)</span>有不等式： <span class="math display">\[
 f((1-λ)x+λy)≤(1-λ)f(x)+λf(y)
 \]</span> 上面是凸函数的性质， 我们任意选取满足 <span class="math inline">\(a&lt;s&lt;t&lt;u&lt;b\)</span> 的 <span class="math inline">\(s、t\)</span> 和 <span class="math inline">\(u\)</span>， (这里隐含一点<span class="math inline">\(f(s),f(t),f(u)\)</span>都是有界的，反之易证其不是凸函数，矛盾) 我们令<span class="math inline">\(t=λu+(1-λ)s\)</span>， 可得 <span class="math inline">\(λ=\frac{t-s}{u-s}\)</span>， 显然 <span class="math inline">\(0&lt;\lambda&lt;1\)</span> 我们应用凸函数的不等式性质得 <span class="math display">\[
-f(t)=f((1-λ)s+λu)≤(1-λ)f(s)+λf(u)=f(s)+λ(f(u)-f(s))
+f(t)=f((1-λ)s+λu)≤(1-λ)f(s)+λf(u)\\=f(s)+λ(f(u)-f(s))
 \]</span> 推出<span class="math inline">\(f(t)-f(s)≦λ(f(u)-f(s))\)</span>，即 <span class="math display">\[
 \frac{f(t)-f(s)}{t-s}≤\frac{f(u)-f(s)}{u-s}
 \]</span> 固定<span class="math inline">\(t\)</span>和<span class="math inline">\(u\)</span>，令<span class="math inline">\(s\to t\)</span>，右边是一个有界常数，可得左边为<span class="math inline">\(f(x)\)</span>在<span class="math inline">\(t\)</span>这一点的左导数， 由于<span class="math inline">\(t\)</span>的任意性可得，<span class="math inline">\(f(x)\)</span>的左导数存在，这说明<span class="math inline">\(f(x)\)</span>是左连续的。</p>
@@ -389,7 +389,7 @@ f(t)=f((1-λ)s+λu)≤(1-λ)f(s)+λf(u)=f(s)+λ(f(u)-f(s))
 <p>对任意自然数<span class="math inline">\(n\)</span>,可得<span class="math inline">\(f(nx)=nf(x)\)</span></p>
 <p>又因为<span class="math inline">\(0=f(0)=f(nx)+f(-nx)\)</span>,故<span class="math inline">\(f(-nx)=-n*f(x)\)</span></p>
 <p>即对任意整数<span class="math inline">\(n,f(nx)=nf(x),\)</span>令<span class="math inline">\(z=nx\)</span>,则<span class="math inline">\(f(1/n*z)=1/nf(z)\)</span>. 所以 <span class="math display">\[
-f(n)=n*f(1),f(1/n)=1/nf(1)\\f(\frac{m}{n})=m*f(\frac{1}{n})=\frac{m}{n}f(1)
+f(n)=n*f(1),f(\frac{1}{n})=\frac{1}{n}f(1)\\f(\frac{m}{n})=m*f(\frac{1}{n})=\frac{m}{n}f(1)
 \]</span> 故对所有有理数<span class="math inline">\(x\)</span>,都有<span class="math inline">\(f(x)=xf(1)\)</span>. 对任意实数<span class="math inline">\(x\)</span>,<span class="math inline">\(x\)</span>是一列有理数的极限,假设<span class="math inline">\(x=\lim_{n \to \infty}x_{n}\)</span>,<span class="math inline">\(x_{n}\)</span>是有理数</p>
 <p>所以 <span class="math display">\[
 f(x)-lim_{n\to \infty}f(x_{n})=lim_{n \to \infty}(f(x)-f(x_{n}))\\=lim_{n \to \infty} f(x-x_{n})=0,
