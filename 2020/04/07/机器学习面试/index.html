@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="娱乐的个人博客">
 <meta property="og:description" content="机器学习 bias 与 variance: bias : 平均预测结果与实际预测结果的差异； bias高，不够关注训练数据，模型简单，易造成欠拟合 variance：模型输出在一个数据点上的分布（或聚类）。方差大，可能密切关注训练数据，但泛化能力弱，过拟合 两者无法同时满足，只有追求两者之间的权衡。 分类 问题的指标：准确率未必可靠，可以用混淆矩阵，ROC曲线(伪正率横轴，真正率负轴)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-06T16:55:09.943Z">
+<meta property="og:updated_time" content="2020-04-07T14:04:19.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习面试">
 <meta name="twitter:description" content="机器学习 bias 与 variance: bias : 平均预测结果与实际预测结果的差异； bias高，不够关注训练数据，模型简单，易造成欠拟合 variance：模型输出在一个数据点上的分布（或聚类）。方差大，可能密切关注训练数据，但泛化能力弱，过拟合 两者无法同时满足，只有追求两者之间的权衡。 分类 问题的指标：准确率未必可靠，可以用混淆矩阵，ROC曲线(伪正率横轴，真正率负轴)">
@@ -372,8 +372,8 @@
 <p>（3）<strong>集成</strong>多个不同的<strong>模型</strong>：比如有1000个罕见样本和10000个常见样本，可以选择10个模型，每次训练1000个罕见样本和1000个常见样本，而后使用集成学习技术得到最佳结果</p>
 <p>（4）重新设计模型---成本函数：针对数据丰富的类别加入<strong>惩罚技术</strong>，是损失函数可以覆盖所有类别</p>
 <h3 id="svm">SVM</h3>
-<p>（1）核方法：将低维空间的数据映射到高维空间，使其线性可分 :<span class="math inline">\([Math Processing Error]f(x)=\phi(x)^T\phi(x)\)</span>核函数的内积</p>
-<p>（2）松弛变量<span class="math inline">\([Math Processing Error]\epsilon\)</span>和惩罚因子<span class="math inline">\([Math Processing Error]C\)</span>:将线性可分SVM拓展为线性不可分SVM，<strong>分类错误才会有松弛变量</strong>，惩罚因子对线性不可分点的惩罚</p>
+<p>（1）核方法：将低维空间的数据映射到高维空间，使其线性可分 :<span class="math inline">\(f(x)=\phi(x)^T\phi(x)\)</span>核函数的内积</p>
+<p>（2）松弛变量<span class="math inline">\(\epsilon\)</span>和惩罚因子<span class="math inline">\(C\)</span>:将线性可分SVM拓展为线性不可分SVM，<strong>分类错误才会有松弛变量</strong>，惩罚因子对线性不可分点的惩罚</p>
 <p>增大C，泛化能力变弱，无穷大时，退化成硬间隔线性可分；减小C，模型泛化能力变好，为0时，模型无意义</p>
 <p><strong>“离群点”</strong>才会有松弛变量，值越大，离群点越远</p>
 <p>（3）缺失数据敏感：没有处理缺失值的策略，希望样本特征空间<strong>线性可分</strong>，特征空间的好坏对SVM影响很大</p>
@@ -487,6 +487,33 @@
 <p>优化器：</p>
 <p>ADam：损失函数对每个参数的梯度的一阶矩估计和二阶矩估计动态调整</p>
 <p>Adagard：自适应学习率，设置一个全局学习率，会自动调整</p>
+<h3 id="梯度消失和梯度爆炸">梯度消失和梯度爆炸</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">梯度消失</th>
+<th style="text-align: center;">梯度爆炸</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">合适的激活函数</td>
+<td style="text-align: center;">合适的激活函数</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BatchNormal(将不规则分布的数据变成标准分布，</td>
+<td style="text-align: center;">映射到激活函数的敏感区域，收敛速度更快，防止过拟合</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">LSTM</td>
+<td style="text-align: center;">LSTM（参数C控制保存和遗忘的信息</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">逐层预训练+对神经网络微调</td>
+<td style="text-align: center;">RNN截断反向传播</td>
+</tr>
+</tbody>
+</table>
 <h3 id="你还有什么需要问的问题吗">你还有什么需要问的问题吗</h3>
 <p>初面：</p>
 <p>关于岗位：</p>
@@ -503,6 +530,10 @@
 <p>（1）<strong>核心素质，工作特质，考察员工的指标</strong></p>
 <p>（2）哪些差距可以改善？ 我还有什么可以提升的地方</p>
 <p>终面：</p>
+<p>（1）工作时间、薪资结构、工资的发放时间</p>
+<p>（2）这个岗位的未来发展</p>
+<p>（3）使用期多长，转正的标准是什么</p>
+<p>（4）绩效评估，加薪规则</p>
 <h3 id="面试答案">面试答案</h3>
 <p>（1）你的优势是什么？</p>
 <p>做事认真负责，承诺的事情一定要做完。有奖问答比赛。</p>
@@ -537,6 +568,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/07/深度学习模型介绍/" rel="prev" title="识别模型">
+                识别模型 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -612,7 +659,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -623,7 +670,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -634,7 +681,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -667,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习"><span class="nav-number">1.</span> <span class="nav-text">机器学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#svm"><span class="nav-number">2.</span> <span class="nav-text">SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lr"><span class="nav-number">3.</span> <span class="nav-text">LR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#l1和l2正则化"><span class="nav-number">4.</span> <span class="nav-text">L1和L2正则化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚类"><span class="nav-number">5.</span> <span class="nav-text">聚类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adaboost-与gbdt的区别"><span class="nav-number">6.</span> <span class="nav-text">Adaboost 与GBDT的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lr-与gdbt的区别"><span class="nav-number">7.</span> <span class="nav-text">LR 与GDBT的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xgboost"><span class="nav-number">8.</span> <span class="nav-text">Xgboost</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树"><span class="nav-number">9.</span> <span class="nav-text">决策树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降算法"><span class="nav-number">10.</span> <span class="nav-text">梯度下降算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你还有什么需要问的问题吗"><span class="nav-number">11.</span> <span class="nav-text">你还有什么需要问的问题吗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试答案"><span class="nav-number">12.</span> <span class="nav-text">面试答案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习"><span class="nav-number">1.</span> <span class="nav-text">机器学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#svm"><span class="nav-number">2.</span> <span class="nav-text">SVM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lr"><span class="nav-number">3.</span> <span class="nav-text">LR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#l1和l2正则化"><span class="nav-number">4.</span> <span class="nav-text">L1和L2正则化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚类"><span class="nav-number">5.</span> <span class="nav-text">聚类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#adaboost-与gbdt的区别"><span class="nav-number">6.</span> <span class="nav-text">Adaboost 与GBDT的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lr-与gdbt的区别"><span class="nav-number">7.</span> <span class="nav-text">LR 与GDBT的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xgboost"><span class="nav-number">8.</span> <span class="nav-text">Xgboost</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树"><span class="nav-number">9.</span> <span class="nav-text">决策树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降算法"><span class="nav-number">10.</span> <span class="nav-text">梯度下降算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度消失和梯度爆炸"><span class="nav-number">11.</span> <span class="nav-text">梯度消失和梯度爆炸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你还有什么需要问的问题吗"><span class="nav-number">12.</span> <span class="nav-text">你还有什么需要问的问题吗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面试答案"><span class="nav-number">13.</span> <span class="nav-text">面试答案</span></a></li></ol></div>
             
 
           </div>
